@@ -1,2 +1,3 @@
-# web-php-anuphat
-web php project
+# anuphat butakhiaw
+* รหัสนักศึกษา 69319010027
+* แผนกวิชาเทคโนโลยีสารสนเทศ
