@@ -1,19 +1,20 @@
 <?php
-    $name = $_GET['userName'];
-    $password = $_GET['userPass'];
-    $email = $_GET['userEmail'];
-    $number = $_GET['userAge'];
-    $birth = $_GET['userBirthday'];
-    $gender = $_GET['UserGender'];
-    $city = $_GET['userCity'];
-    $hobby = $_GET['userHobby'];
-    $msg = $_GET['userMsg'];
-
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $name = $_GET['userName'] ?? 'ไม่ระบุ';
+    $password = $_GET['userPass'] ?? 'ไม่ระบุ';
+    $email = $_GET['userEmail'] ?? 'ไม่ระบุ';
+    $age = $_GET['userAge'] ?: 'ไม่ระบุ';
+    $birth = $_GET['userBirthday'] ?: 'ไม่ระบุ';
+    $gender = $_GET['UserGender'] ?? 'ไม่ระบุ';
+    $city = $_GET['userCity'] ?? 'ไม่ระบุ';
+    $hobby = $_GET['userHobby'] ?? ['ไม่ระบุ'];
+    $msg = $_GET['userMsg'] ?: 'ไม่ระบุ';
+}
 
     echo "สวัสดีคุณ $name<br>";
     echo "รหัสผ่านของคุณคือ: $password<br>";
     echo "อีเมลของคุณคือ: $email<br>";
-    echo "อายุของคุณคือ: $number<br>";
+    echo "อายุของคุณคือ: $age<br>";
     echo "วันเกิดของคุณคือ: $birth<br>";
     echo "เพศของคุณคือ: $gender<br>";
     echo "จังหวัดของคุณคือ: $city<br>";
