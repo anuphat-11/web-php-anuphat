@@ -1,5 +1,5 @@
 <?php
-    setcookie("user","anuphat", 3600,  "/");
-    echo
+
+    setcookie("user","anuphat", time() + 3600,  "/");
 
 ?>
