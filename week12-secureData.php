@@ -17,12 +17,16 @@
             PDO::ERRMODE_EXCEPTION
         );
 
-        $name = "anuphat";
+        $name = "piyakorn";
 
         $sql ="
-        SELECT * FROM student WHERE name = '$name'";
-        $stmt = $pdo->query($sql);
-        $student = $stmt->fetch(PDO::FETCH_ASSOC);
+        SELECT * FROM student WHERE name = ?";
+
+        $stmt = $pdo->prepare($sql);
+
+        $stmt->execute([$name]);
+
+        $student = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         echo "นักศึกษาที่มีชื่อ" . $name . " มีข้อมูลดังนี้ <br>";
         echo "ID: " . $student['id'] . "<br>";  
