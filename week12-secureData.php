@@ -17,7 +17,7 @@
             PDO::ERRMODE_EXCEPTION
         );
 
-        $name = "piyakorn";
+        $name = "anuphat";
 
         $sql ="
         SELECT * FROM student WHERE name = ?";
