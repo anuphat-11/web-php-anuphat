@@ -35,7 +35,9 @@
                 <td><?= $student['age']; ?></td>
                 <td>
                     <a href="edit.php?id=<?= $student['id']; ?>">แก้ไข</a>
-                    <a href="delete.php?id=<?= $student['id']; ?>">ลบ</a>
+                    <a href="delete.php?id=<?= $student['id']; ?>"
+                    onclick="return confirm('คุณต้องการลบข้อมูลนี้ใช่หรือไม่')">ลบ</a>
+                        
                 </td>
             </tr>
             <?php } ?>
