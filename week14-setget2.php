@@ -1,0 +1,24 @@
+<?php
+	class student{
+			protected $name;
+
+			public function setName($name){
+				$this->name = $name;
+		}
+			public function getName(){
+				return $this->name;
+		}
+	}
+
+		class classroom extends student{
+			public $classRoom;
+	}
+	
+	$std_class = new classroom();
+	$std_class->setName("สมศรี");
+	echo $std_class->getName();
+
+
+
+
+?>
